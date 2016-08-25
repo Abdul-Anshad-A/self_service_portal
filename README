@@ -1,0 +1,48 @@
+A hybrid self service portal to provision & manage VM's on VMware and solusVM in a single environment !!
+
+Front end:
+	- basic UI with PHP/HTML
+Back end:
+	- VMware - python, pysphere(Python API for interacting with the vSphere Web Services SDK)
+	- solusVM - PHP, solusVM API
+
+List of supported operations:
+
+VMware:
+
+	- Create Virtual Machines from Template
+	- Power on a Virtual machine
+	- Power off a Virtual machine
+	- Reset a Virtual machine
+	- Suspend a Virtual machine
+	- Guest Power Operations
+	- Resize Virtual machine Resources
+	- Add disk to a Virtual machine
+	- List IP Addresses of all machines
+	- Assign IP Address to a machine
+	- Snapshot operations
+	- Clone VM
+	- Migrate a VM
+	- Activate Windows License against a KMS server
+	- Virtual Machine Information
+	- VCenter Information
+	- VNC Operations - enable/view/disable
+	- VM Power Status
+
+
+solusVM:
+
+	- List all the Clients
+	- List all the Templates
+	- Get Server Status by ID
+	- List all Servers in a node
+	- List all nodes
+	- List all plans of a node
+	- List ISO
+	- Terminate a server
+	- Power Operations
+
+
+VMware scripts - dir scripts/misc/
+solusVM  - dir solusvm/
+index - choose.php

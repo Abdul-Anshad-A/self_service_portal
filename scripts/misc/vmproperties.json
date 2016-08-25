@@ -1,0 +1,1 @@
+{'summary': '512,000 KB', '_obj': <pysphere.vi_property.VIProperty object at 0x3361950>, 'unitNumber': 1, 'key': 2001, 'label': 'Hard disk 2', 'type': 'VirtualDisk', 'capacityInKB': 512000}

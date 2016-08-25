@@ -1,0 +1,86 @@
+      <form action="test3.php" method="post"
+ onsubmit="return validateForm(this)">
+	<script>
+	function showForm(id) {
+    document.getElementById('submitForm').style.display = "block";
+    if (id == 0) {
+        document.getElementById('submitForm').style.display = "none";
+    }
+    for (var i = 1; i < 5; i++) {
+        if (i == id) {
+            document.getElementById(i).style.display = 'block';
+        } else {
+            document.getElementById(i).style.display = 'none';
+        }
+    }
+}
+
+	</script>
+
+
+        <p><b> Select the Option for snapshot</b></p>
+        <select id="dropdownMenu" name="dropdownMenu"
+ onchange="javascript: showForm(document.getElementById('dropdownMenu').value);">
+        <option value="0"> Choose an option </option>
+        <option value="1">Create</option>
+        <option value="2">Delete</option>
+        <option value="3">list</option>
+        <option value="4">revert</option>
+        </select>
+
+
+
+        <div id="1" style="display: none;">
+        <h2> You selected to create a snapshot </h2>
+        <p> VM NAME: <input name="vmname"
+ size="10" type="text"><br>
+	<br>
+	Snapshot name: <input name="snapshotname"
+ size="10" type="text">
+	<br>
+        <br>Snapshot Description:
+	<textarea name="snapshotdesc" rows="3" cols="40"></textarea>
+	<br>
+        </p>
+        </div>
+
+
+        <div id="2" style="display: none;">
+        <h2> You selected to Delete a snapshot </h2>
+        <p> VMNAME: <input name="vmname"
+ size="10" type="text"><br>
+	<br>
+	Snapshot Name: <input name="snapshotname"
+ size="10" type="text">
+        <br>
+        </p>
+        </div>
+
+
+	        <div id="3" style="display: none;">
+        <h2> You selected to list snapshots </h2>
+        <p> VMNAME: <input name="classDrop"
+ size="10" type="text"><br>
+	 <br>
+        </p>
+        </div>
+
+
+
+	                <div id="4" style="display: none;">
+        <h2> You selected to revert to a snapshot</h2>
+        <p> VMNAME: <input name="vmname"
+ size="10" type="text"><br>
+	 <br>
+	Snapshot name: <input name="snapshotname"
+ size="10" type="text"><br>
+        </p>
+        </div>
+
+
+
+
+        <div id="submitForm" style="display: none;">
+        <p> <br>
+        <input value="Submit" type="submit"> </p>
+
